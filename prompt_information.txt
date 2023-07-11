@@ -1,0 +1,7 @@
+This is the third program derived from 100 program suggested by ChatGPT for a 4 week python course. Since I already have programming expertise, I'll be combining the following four prompts into a single program. My main goal is to pay close attention to pythonic syntax, creating/updating git repositories, and developing good commenting habits. Upon completing this program, I'll push it to github and request feedback from my peers.
+
+The following 4 ChatGPT prompts were used to develop this program:
+12. Create a program that checks if a given string is a palindrome.
+13. Generate the Fibonacci sequence up to a specified limit.
+14. Calculate the average of a list of numbers.
+15. Reverse a given string.
