@@ -1,18 +1,28 @@
 '''
 >>> JAAR
->>> 07/12/2023
+>>> 07/14/2023
 >>> Practicing Fundamentals Program 3
->>> Version 1
+>>> Version 2
 '''
 '''
->>> Generates a program that checks if a string is a palindrome and will reverse the string for the user to verify. The string length will then be used to generate a random number (inclusive) which will serve as n for the fibonacci sequence. Finally, a total of 5 numbers will be selected from the same range to calculate an average.
+>>> Generates a program that counts the vowels in a string. It will also check if the string is palindrome and will reverse the string to verify. The string length will then be used to generate a random number (inclusive) which will serve as n for the fibonacci sequence. Finally, a total of 5 numbers will be selected from the same range to calculate an average and the larges value.
 '''
 
 import random
 
 def main() :
+    vowels = ['a', 'e', 'i', 'o', 'u']
     # Assume the user input will never be less than 1.
     inputted_string = input('Enter a word/phrase, and I will check if it is a palindrome: ').lower()
+    vowel_count = 0
+    for ch in inputted_string :
+        if ch in vowels :
+            vowel_count += 1
+    if vowel_count != 0 :
+        print(f'\tYour input contains {vowel_count} vowels.')
+    else :
+        print(f'\tYour input contained no vowels.')
+
     string_len = len(inputted_string)
     reversed_input = inputted_string[::-1]
 
@@ -47,9 +57,11 @@ def main() :
             generated_rand = random.randint(0, string_len)
         random_numbers.append(generated_rand)
     average_random_ints = sum(float(n) for n in random_numbers) / len(random_numbers)
+    largest_value =max(random_numbers)
 
     print(f'''
         \tRandom numbers: {", ".join(str(n) for n in random_numbers)}
+        \tLargest Value: {largest_value}
         \tAverage: {average_random_ints}
         ''')
 
